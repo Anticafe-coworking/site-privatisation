@@ -10,6 +10,7 @@ class MyApp extends App {
         const { Component, pageProps } = this.props;
         return (
             <div>
+
                 {/* <Meta /> */}
                 {/* <Page> */}
                 <Component {...pageProps} />

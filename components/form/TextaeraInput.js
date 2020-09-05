@@ -10,7 +10,7 @@ const TextaeraInput = ({ ...props }) => {
             {...field}
             {...props}
             as="textarea" rows="3"
-            className="form-control-lg"
+            className="form-control-lg margin-top-input-small"
             onChange={val => {
                 setFieldValue(field.name, val.target.value);
             }}

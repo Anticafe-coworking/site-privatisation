@@ -8,7 +8,7 @@ html{
 }
 @font-face {
     font-family: 'Futura-PT-Light';
-    src: url('/public/Futura-PT-Light.otf');
+    src: url('/fonts/Futura-PT-Light.otf');
     line-height: 1.7;
     font-weight: normal;
     font-style: normal;
@@ -17,31 +17,68 @@ html{
 body{
     padding: 0;
     margin: 0;
-    font-size: 1.2em!important;
+    font-size: 16px!important;
     background-image: url('https://www.anticafe.eu/wp-content/uploads/2020/01/IMG_9842.jpg');
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     line-height: 1.6;
     color:#212529;
-    font-family: 'Futura-PT-Light', 'sans-serif';
+    font-family: 'Futura-PT-Light';
 }
 
 h1{
+    font-family: 'Futura-PT-Light', 'Sans-serif';
     font-size: 3em !important;
 }
 h4{
+    font-family: 'Futura-PT-Light';
     font-size: 1.4em !important;
 }
 
 p{
+    font-family: 'Futura-PT-Light';
     font-size: 1.333333em !important;
 }
 
+.green-btn{
+    padding: 8px 16px;
+    color: #000000;
+    border: 1px solid #707070;
+    font-size: 18px;
+    margin: 0.5rem 1rem 0 1rem;
+    font-family: 'Futura-PT-Light';
+    text-align: center;
+    /* display: inline; */
+}
 
-button{
+.green-btn:hover{
+    border: solid 1px #93CABE;
+    color: white !important;
+    cursor: pointer;
+    background-color: #93CABE !important;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 8px 8px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 8px 8px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.05);
+}
+
+
+.active-btn-navbar{
+    padding: 8px 16px;
+    font-size: 18px;
+    margin: 0.5rem 1rem 0 1rem;
+    font-family: 'Futura-PT-Light';
+    /* display: inline; */
+    text-align: center;
+    border: solid 1px #93CABE;
+    color: white !important;
+    background-color: #93CABE !important;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 8px 8px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 8px 8px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.05);  
+}
+
+.grey-button{
     background-color: #343a40 !important;
     border-color: #343a40 !important;
     color: #FFFFFF !important;
@@ -52,7 +89,7 @@ button{
     line-height: 1.5 !important; 
 }
 
-button:hover {
+.grey-button:hover {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 8px 8px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.05)
 }
 
@@ -65,7 +102,7 @@ button:hover {
 
 .booking-container{
     width: 100%;
-    height: 100vh;
+    margin: 0 0 4.5em 0!important;
 }
 
 #select-booking{
@@ -73,6 +110,9 @@ button:hover {
     mix-blend-mode: normal;
     opacity: 0.9;
     border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6em;
 }
 
 .margin-top{
@@ -88,6 +128,14 @@ button:hover {
     margin-bottom: 1rem !important;
 }
 
+.margin-top-inputs{
+    margin-top: 2rem !important;
+}
+
+.margin-top-input-small{
+    margin-top: 1rem !important;
+}
+
 .margin-bottom-inputs{
     margin-bottom: 2rem !important;
 }
@@ -98,7 +146,7 @@ button:hover {
 
 .form-control-lg{
     padding: .5rem 1rem;
-    font-size: .9rem;
+    font-size: 16px !important;
     line-height: 1;
 }
 
@@ -120,4 +168,17 @@ button:hover {
 .react-datepicker-wrapper{
     display: block !important;
 } 
+
+@media screen and (max-width: 800px) {
+    .item-navbar{
+        margin: 5px 0;
+    }
+}
+
+.footer {
+    height: 60px;
+    min-height: 150px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
 

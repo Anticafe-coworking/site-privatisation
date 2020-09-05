@@ -1,11 +1,23 @@
-module.exports = {
-    module: {
-        rules: [
-            {
-                test: /\.(png|jpg|woff|svg|eot|ttf|woff2|otf)$/,
-                loader: 'url-loader?limit=8192&name=images/[name].[ext]'
+const debug = process.env.NODE_ENV !== "production";
+const withFonts = require('next-fonts');
 
+module.exports = withFonts({
+    exportPathMap: function () {
+        return {
+            "/": { page: "/" }
+        }
+    },
+    assetPrefix: !debug ? '/site-privatisation' : '',
+    webpack: (config, { dev }) => {
+        config.module.rules = config.module.rules.map(rule => {
+            if (rule.loader === 'babel-loader') {
+                rule.options.cacheDirectory = false
             }
-        ]
+            return rule
+        })
+        return config
+    },
+    env: {
+        API_URL: "https://immense-refuge-77616.herokuapp.com/createEstimate"
     }
-}
+})
